@@ -148,7 +148,6 @@ button:active{
 
 .card {
   width: 30%;
-  height: 28rem;
   background: #f9f9f9;
   border-radius: 25px;
   overflow: hidden;
@@ -157,7 +156,8 @@ button:active{
 
 .card .img-wrapper{
   overflow: hidden;
-  height: 40%;
+  height: 15rem;
+  text-align: center;
 }
 
 .card-content{
@@ -178,4 +178,97 @@ footer{
   color: #fff;
   padding: 2rem;
   text-align: center;
+}
+
+@media(max-width: 1325px){
+  main{
+    padding: 0 10rem;
+  }
+
+  .about{
+    flex-direction: column;
+  }
+  
+  .about .text{
+    padding: 1rem 0;
+  }
+
+  .references{
+    width: auto;
+    margin: 2.5rem 0;
+  }
+
+  .references .cards{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card{
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .contact form{
+    width: auto;
+  }
+}
+
+@media(max-width: 700px){
+  main{
+    padding: 0 1.5rem;
+  }
+
+  header nav{
+    display: block;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    padding-top: 6rem;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: 300ms;
+  }
+
+  nav a{
+    display: block;
+    margin: 2.5rem 0;
+  }
+
+  .menu{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+  }
+
+  .menu .bar{
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background: #555;
+    z-index: 100;
+    transition: 300ms;
+  }
+
+  .menu:focus{
+    pointer-events: none;
+  }
+
+  .menu:focus .bar{
+    transform: rotateZ(-45deg);
+    position: absolute;
+  }
+
+  .menu:focus .bar:nth-child(3){
+    transform: rotateZ(45deg);
+  }
+
+  .menu:focus + nav{
+    left: 0;
+  }
 }
