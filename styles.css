@@ -68,8 +68,12 @@ a:hover{
 
 .text{
   flex: 1;
-  padding: 8rem;
+  padding: 3rem 8rem;
   line-height: 1.75;
+}
+
+.text p{
+  max-width: 600px;
 }
 
 section h1{
@@ -123,7 +127,13 @@ input, textarea{
   font-size: 16px;
 }
 
-button{
+.link-btn{
+  border: 0 !important;
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+button, .btn{
   background: var(--primary);
   color: #fff;
   border: 0;
@@ -134,13 +144,13 @@ button{
   transition: 200ms;
 }
 
-button:hover{
+button:hover, .btn:hover{
   background: #f87355;
   transform: scale(1.025) translateY(-2px);
   box-shadow: 0 4px 0 #cf4829;
 }
 
-button:active{
+button:active, .btn:active{
   transform: scale(0.975);
   box-shadow: none;
 }
