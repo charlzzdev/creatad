@@ -107,6 +107,7 @@ textarea{
 
 .input-field{
   position: relative;
+  z-index: -100;
 }
 
 .input-field label{
