@@ -51,11 +51,11 @@
 }
 
 .ad:nth-last-child(2){
-  opacity: 75%;
+  opacity: 0.75;
 }
 
 .ad:last-child{
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 @media(max-width: 1325px){
