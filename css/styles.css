@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
-@import url('./ads-styles.css');
+@import url('./illustration-styles.css');
 
 :root{
   --primary: #fd8369;
@@ -33,7 +33,7 @@ header{
 }
 
 body{
-  background: url('blob.svg') no-repeat;
+  background: url('../assets/blob.svg') no-repeat;
 }
 
 main{
@@ -107,7 +107,6 @@ textarea{
 
 .input-field{
   position: relative;
-  z-index: -100;
 }
 
 .input-field label{
