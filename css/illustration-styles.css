@@ -58,14 +58,37 @@
   opacity: 0.5;
 }
 
+.infoblock{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
 @media(max-width: 1325px){
   .ad:last-child, .ad:nth-last-child(2){
     display: none;
+  }
+
+  .infoblock{
+    width: 40%;
+  }
+
+  footer{
+    text-align: left !important;
   }
 }
 
 @media(max-width: 700px){
   .ad{
     width: auto;
+  }
+
+  label{
+    display: none;
+  }
+
+  .infoblock{
+    width: 55%;
   }
 }
