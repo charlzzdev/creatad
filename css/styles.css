@@ -109,6 +109,10 @@ textarea{
   position: relative;
 }
 
+::placeholder{
+  color: transparent;
+}
+
 .input-field label{
   position: absolute;
   top: 0;
@@ -305,5 +309,13 @@ footer{
 
   .menu:focus + nav{
     left: 0;
+  }
+
+  .input-field{
+    position: static;
+  }
+
+  ::placeholder{
+    color: #727272;
   }
 }
