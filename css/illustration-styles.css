@@ -50,6 +50,11 @@
   background: #fff;
 }
 
+.ad:nth-last-child(2), .ad:last-child{
+  position: relative;
+  z-index: -100;
+}
+
 .ad:nth-last-child(2){
   opacity: 0.75;
 }
