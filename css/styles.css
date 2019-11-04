@@ -40,10 +40,10 @@ main{
   padding-top: 5rem;
 }
 
-.logo-creat{
-  background: var(--primary);
-  color: #fff;
-  padding: 0 0.25rem;
+.logo{
+  border: 0 !important;
+  outline: 0 !important;
+  height: 3rem;
 }
 
 nav a{
