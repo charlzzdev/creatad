@@ -2,7 +2,10 @@
 @import url('./illustration-styles.css');
 
 :root{
-  --primary: #fd8369;
+  --dark: #333;
+  --light: #555;
+  --lighter: #888;
+  --lightest: #fff;
 }
 
 html{
@@ -28,7 +31,7 @@ header{
 
 .header-thin{
   padding: 0.5rem 1rem;
-  background: #fff;
+  background: var(--lightest);
   box-shadow: 0 0 6px #bdbdbd;
 }
 
@@ -51,15 +54,14 @@ nav a{
 }
 
 a{
-  /* color: #f8b807; */
-  color: var(--primary);
+  color: var(--dark);
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: 200ms;
 }
 
 a:hover{
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 2px solid var(--dark);
 }
 
 .about{
@@ -80,11 +82,11 @@ a:hover{
 section h1{
   font-size: 4rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--dark);
 }
 
 p{
-  color: #555;
+  color: var(--light);
 }
 
 textarea{
@@ -102,7 +104,7 @@ textarea{
 
 .contact form .small-text-info{
   font-size: 12px;
-  color: #888;
+  color: var(--lighter);
   margin-top: 1rem;
 }
 
@@ -118,9 +120,9 @@ textarea{
   position: absolute;
   top: 0;
   left: 10px;
-  background: #fff;
+  background: var(--lightest);
   padding: 0 0.25rem;
-  color: #555;
+  color: var(--light);
 }
 
 input, textarea{
@@ -139,8 +141,8 @@ input, textarea{
 }
 
 button, .btn{
-  background: var(--primary);
-  color: #fff;
+  background: var(--dark);
+  color: var(--lightest);
   border: 0;
   border-radius: 5px;
   padding: 0.75rem 1.5rem;
@@ -150,9 +152,9 @@ button, .btn{
 }
 
 button:hover, .btn:hover{
-  background: #f87355;
+  background: #444;
   transform: scale(1.025) translateY(-2px);
-  box-shadow: 0 4px 0 #cf4829;
+  box-shadow: 0 4px 0 #222;
 }
 
 button:active, .btn:active{
@@ -161,7 +163,7 @@ button:active, .btn:active{
 }
 
 :focus{
-  outline: 1px solid var(--primary);
+  outline: 1px solid var(--dark);
 }
 
 .references{
@@ -211,8 +213,8 @@ section{
 }
 
 footer{
-  background: #333;
-  color: #fff;
+  background: var(--dark);
+  color: var(--lightest);
   padding: 2rem;
   text-align: center;
 }
@@ -262,7 +264,7 @@ footer{
     display: block;
     position: fixed;
     width: 100%;
-    background: #fff;
+    background: var(--lightest);
     padding-top: 6rem;
     left: -100%;
     top: 0;
@@ -290,7 +292,7 @@ footer{
     width: 100%;
     height: 3px;
     border-radius: 10px;
-    background: #555;
+    background: var(--light);
     z-index: 100;
     transition: 300ms;
   }
@@ -317,6 +319,6 @@ footer{
   }
 
   ::placeholder{
-    color: #727272;
+    color: var(--lighter);
   }
 }
