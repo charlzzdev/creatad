@@ -61,7 +61,7 @@ a{
 }
 
 a:hover{
-  border-bottom: 2px solid var(--dark);
+  border-bottom: 2px solid #ececec;
 }
 
 .about{
@@ -177,39 +177,30 @@ section{
 
 .references h1{
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .references .cards{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 .card {
-  width: 30%;
+  height: 20rem;
   background: #f9f9f9;
-  border-radius: 25px;
   overflow: hidden;
-  box-shadow: 0 3px 10px #bdbdbd;
+}
+
+.card:hover{
+  cursor: pointer;
+  background: #f1f1f1;
 }
 
 .card .img-wrapper{
-  overflow: hidden;
-  height: 15rem;
-  text-align: center;
-}
-
-.card-content{
-  padding: 1rem 1.5rem;
-}
-
-.card-content h2{
-  margin-bottom: 0.75rem;
-}
-
-.card-content button{
-  display: block;
-  margin: 1rem 0 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer{
@@ -221,13 +212,9 @@ footer{
 
 @media(max-width: 1325px){
   main{
-    padding: 5rem 10rem 0 10rem;
+    padding: 5rem 4rem 0 4rem;
   }
 
-  .about{
-    flex-direction: column;
-  }
-  
   .about .text{
     padding: 1rem 0;
   }
@@ -237,23 +224,35 @@ footer{
   }
 
   .references .cards{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card{
-    width: 100%;
-    margin: 1rem 0;
+    grid-template-columns: 50% 50%;
   }
 
   .contact form{
-    width: auto;
+    width: 50%;
+  }
+}
+
+@media(max-width: 1030px){
+  .contact form{
+    width: 75%;
   }
 }
 
 @media(max-width: 700px){
   main{
     padding: 5rem 1.5rem 0 1.5rem;
+  }
+
+  .about{
+    flex-direction: column;
+  }
+
+  .references .cards{
+    grid-template-columns: 100%;
+  }
+
+  .contact form{
+    width: auto;
   }
 
   section h1{
