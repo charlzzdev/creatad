@@ -27,6 +27,7 @@ header{
   position: fixed;
   width: 100%;
   transition: 300ms;
+  z-index: 10000;
 }
 
 .header-thin{
@@ -200,6 +201,44 @@ section{
 
 .card .img-wrapper img{
   width: 100%;
+  opacity: 0.25;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.testimonials{
+  max-width: 35vw;
+  min-height: 10rem;
+  margin: 4rem auto 2rem auto;
+  position: relative;
+}
+
+.testimonials::before{
+  content: '„';
+  font-size: 4rem;
+  color: #e2e2e2;
+  line-height: 1;
+  position: absolute;
+  left: -3.5rem;
+  bottom: 0;
+}
+
+.testimonials::after{
+  content: '”';
+  font-size: 4rem;
+  color: #e2e2e2;
+  line-height: 1;
+  position: absolute;
+  right: -3rem;
+  top: 0;
+}
+
+.testimonials h2{
+  margin-bottom: 1rem;
+}
+
+.testimonials p{
+  line-height: 1.5;
 }
 
 footer{
@@ -241,6 +280,10 @@ footer{
   .references .cards{
     grid-template-columns: repeat(4, 25%);
   }
+
+  .testimonials{
+    max-width: 80%;
+  }
 }
 
 @media(max-width: 700px){
@@ -254,6 +297,16 @@ footer{
 
   .references .cards{
     grid-template-columns: repeat(2, 50%);
+  }
+
+  .testimonials::before{
+    left: -1rem;
+    bottom: -2rem;
+  }
+
+  .testimonials::after{
+    right: -1rem;
+    top: -2rem;
   }
 
   .contact form{
