@@ -1,59 +1,3 @@
-.ads-illustration{
-  flex: 1.25;
-  padding-top: 3rem;
-}
-
-.ad{
-  width: 410px;
-  height: 155px;
-  background: #fff;
-  border: 3px solid #e8e8e8;
-  padding: 1rem;
-  margin: 1rem auto;
-}
-
-.ad, .ad *{
-  border-radius: 12px;
-}
-
-.title-placeholder{
-  width: 60%;
-  height: 20px;
-  background: #c0c0c0;
-  margin-bottom: 0.5rem;
-}
-
-.url-placeholder{
-  width: 40%;
-  height: 12px;
-  background: #e9e9e9;
-  margin-bottom: 1.25rem;
-}
-
-.p-placeholder{
-  width: 100%;
-  height: 12px;
-  background: #c0c0c0;
-  margin-bottom: 0.5rem;
-}
-
-.p-placeholder:last-child{
-  width: 75%;
-}
-
-.ad:nth-last-child(2), .ad:last-child{
-  position: relative;
-  z-index: -100;
-}
-
-.ad:nth-last-child(2){
-  opacity: 0.75;
-}
-
-.ad:last-child{
-  opacity: 0.5;
-}
-
 .infoblock{
   position: fixed;
   right: 0;
@@ -62,16 +6,6 @@
 }
 
 @media(max-width: 1325px){
-  .ad{
-    margin-right: 0;
-    width: 360px;
-  }
-
-  .ads-illustration{
-    flex: 0.6;
-    padding-left: 5rem;
-  }
-
   .infoblock{
     width: 40%;
   }
@@ -81,26 +15,7 @@
   }
 }
 
-@media(max-width: 1120px){
-  .ads-illustration{
-    display: none;
-  }
-}
-
 @media(max-width: 700px){
-  .ad{
-    width: auto;
-  }
-
-  .ads-illustration{
-    display: block;
-    padding-left: 0;
-  }
-  
-  .ad:last-child, .ad:nth-last-child(2){
-    display: none;
-  }
-
   label{
     display: none;
   }
