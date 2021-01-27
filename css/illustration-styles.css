@@ -9,17 +9,9 @@
   .infoblock{
     width: 40%;
   }
-
-  footer{
-    text-align: left !important;
-  }
 }
 
 @media(max-width: 700px){
-  label{
-    display: none;
-  }
-
   .infoblock{
     width: 55%;
   }

@@ -1,3 +1,7 @@
+// get current year for the footer
+document.getElementById('footer_year').innerText = new Date().getFullYear();
+
+// header setup
 const header = document.getElementsByTagName('header')[0];
 
 document.addEventListener('scroll', () => {
@@ -6,6 +10,7 @@ document.addEventListener('scroll', () => {
   } else header.classList.remove('header-thin');
 });
 
+// testimonials setup
 const testimonials = [
   {
     id: 'stylist',
@@ -42,7 +47,7 @@ let tesIndex = 0;
 const showTestimonials = () => {
   const currentImage = document.getElementById(testimonials[tesIndex].id);
 
-  allImages.forEach(img => img.style.opacity = 0.25);
+  allImages.forEach(img => img.style.opacity = 0.5);
   currentImage.style.opacity = 1;
 
   tesTitle.innerText = testimonials[tesIndex].title;

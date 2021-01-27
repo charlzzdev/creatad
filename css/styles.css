@@ -1,12 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('./illustration-styles.css');
-
-:root{
-  --dark: #333;
-  --light: #555;
-  --lighter: #888;
-  --lightest: #fff;
-}
 
 html{
   scroll-behavior: smooth;
@@ -16,28 +9,200 @@ html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.tooltip {
+  background: #222;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.25rem;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: default;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  background: #222;
+  font-weight: normal;
+  padding: 1rem;
+  left: 150%;
+  top: -80%;
+  width: max-content;
+  max-width: 400px;
+  line-height: 1.5;
+  border-radius: 6px;
+  animation: fadeIn 400ms;
+}
+
+.tooltip:hover::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  right: -50%;
+  border: 6px solid transparent;
+  border-right-color: #222;
+  animation: fadeIn 400ms;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.about {
+  margin-top: 4rem;
+}
+
+.about h2 {
+  margin-bottom: 2rem;
+}
+
+.about p {
+  margin-bottom: 1.5rem;
+}
+
+.offer-card {
+  background: #f5f5f5;
+  border-radius: 6px;
+  padding: 2rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.offer-card h3 {
+  margin-bottom: 1.5rem;
+}
+
+.offer-card ul {
+  margin-left: 1.5rem;
+  list-style-image: url('../assets/checkmark-black.svg');
+}
+
+.offer-card ul li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.services h2 {
+  margin-bottom: 2rem;
+}
+
+.services--cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.divider-info {
+  padding: 0.25rem;
+  background: #000;
+  color: #fff;
+}
+
+.divider-info h2 {
+  margin-bottom: 1.5rem;
+}
+
+.divider-info p, .divider-info a {
+  color: #fff;
+  border-color: #fff;
+}
+
+.identity-design h1 {
+  margin-bottom: 3rem;
+}
+
+.identity-design--flow {
+  margin-left: 0.85rem;
+}
+
+.identity-design--flow--step h3 {
+  margin-bottom: 0.5rem;
+}
+
+.identity-design--flow--step {
+  position: relative;
+  padding: 0 0 2.5rem 2.5rem;
+  border-left: 1px solid #909090;
+}
+
+.identity-design--flow--step::before {
+  content: attr(data-step);
+  position: absolute;
+  left: -0.85rem;
+  top: -0.075rem;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-weight: bold;
+}
+
+.identity-design--flow--step:last-child {
+  border-left: 0;
+}
+
+.identity-design--flow--step:last-child::before {
+  color: transparent;
+  background-image: url('../assets/checkmark-white.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0;
   position: fixed;
   width: 100%;
   transition: 300ms;
   z-index: 10000;
 }
 
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
 .header-thin{
-  padding: 0.5rem 1rem;
-  background: var(--lightest);
+  padding: 0.5rem 0;
+  background: #fff;
   box-shadow: 0 0 6px #bdbdbd;
 }
 
 body{
-  background: url('../assets/blob.svg') no-repeat;
+  background: url('../assets/bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 main{
@@ -45,56 +210,23 @@ main{
 }
 
 .logo{
-  border: 0 !important;
-  outline: 0 !important;
-  height: 3rem;
+  border: 0;
+}
+
+.logo img {
+  width: 200px;
 }
 
 nav a{
   margin-left: 2rem;
+  border: 0;
 }
 
 a{
-  color: var(--dark);
+  color: #222;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid #222;
   transition: 200ms;
-}
-
-a:not(.img-wrapper):hover{
-  border-bottom: 2px solid #ececec;
-}
-
-.about{
-  display: flex;
-}
-
-.text{
-  max-width: 40rem;
-  margin: 0 auto;
-  line-height: 1.75;
-}
-
-.text p{
-  margin-bottom: 1rem;
-}
-
-section h1{
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--dark);
-}
-
-p{
-  color: var(--light);
-  font-size: 0.875rem;
-}
-
-ul{
-  color: var(--light);
-  font-size: 0.875rem;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
 }
 
 textarea{
@@ -106,13 +238,13 @@ textarea{
 }
 
 .contact form{
-  width: 35%;
+  width: 75%;
   margin: 2rem auto;
 }
 
 .contact form .small-text-info{
   font-size: 12px;
-  color: var(--lighter);
+  color: #222;
   margin-top: 1rem;
 }
 
@@ -128,9 +260,9 @@ textarea{
   position: absolute;
   top: 0;
   left: 10px;
-  background: var(--lightest);
+  background: #fff;
   padding: 0 0.25rem;
-  color: var(--light);
+  color: #444;
 }
 
 input, textarea{
@@ -149,8 +281,8 @@ input, textarea{
 }
 
 button, .btn{
-  background: var(--dark);
-  color: var(--lightest);
+  background: #000;
+  color: #fff;
   border: 0;
   border-radius: 5px;
   padding: 0.75rem 1.5rem;
@@ -171,16 +303,7 @@ button:active, .btn:active{
 }
 
 :focus{
-  outline: 1px solid var(--dark);
-}
-
-.references{
-  width: 75%;
-  margin: 0 auto;
-}
-
-section{
-  padding-top: 4rem;
+  outline: 1px solid #000;
 }
 
 .references h1{
@@ -201,15 +324,15 @@ section{
 
 .card .img-wrapper img{
   width: 100%;
-  opacity: 0.25;
+  opacity: 0.5;
   transition: 200ms;
   cursor: pointer;
 }
 
 .testimonials{
-  max-width: 35vw;
+  max-width: 80%;
   min-height: 10rem;
-  margin: 4rem auto 2rem auto;
+  margin: 4rem auto;
   position: relative;
 }
 
@@ -237,38 +360,17 @@ section{
   margin-bottom: 1rem;
 }
 
-.testimonials p{
-  line-height: 1.5;
-}
-
 footer{
-  background: var(--dark);
-  color: var(--lightest);
+  background: #000;
+  color: #fff;
   padding: 2rem;
   text-align: center;
 }
 
-@media(max-width: 1325px){
-  main{
-    padding: 5rem 4rem 0 4rem;
-  }
-
-  .references{
-    width: auto;
-  }
-
-  .references .cards{
-    grid-template-columns: repeat(8, 12.5%);
-  }
-
-  .contact form{
-    width: 50%;
-  }
-}
-
-@media(max-width: 1030px){
-  .contact form{
-    width: 75%;
+@media(max-width: 1200px) {
+  body {
+    background-size: unset;
+    background-position: -180px 0;
   }
 }
 
@@ -277,22 +379,41 @@ footer{
     grid-template-columns: repeat(4, 25%);
   }
 
-  .testimonials{
-    max-width: 80%;
+  .tooltip:hover::after {
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -110%);
+    width: 200px;
+  }
+  
+  .tooltip:hover::before {
+    display: none;
   }
 }
 
-@media(max-width: 700px){
-  main{
-    padding: 5rem 1.5rem 0 1.5rem;
+@media(max-width: 720px){
+  .references .cards{
+    grid-template-columns: repeat(2, 50%);
   }
 
-  .about{
+  .logo img {
+    width: 150px;
+  }
+
+  .services--cards {
     flex-direction: column;
   }
 
-  .references .cards{
-    grid-template-columns: repeat(2, 50%);
+  .services--cards .offer-card {
+    width: 100%;
+  }
+
+  .services--cards .offer-card:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  .testimonials {
+    max-width: unset;
   }
 
   .testimonials::before{
@@ -309,15 +430,11 @@ footer{
     width: auto;
   }
 
-  section h1{
-    font-size: 2rem;
-  }
-
   header nav{
     display: block;
     position: fixed;
     width: 100%;
-    background: var(--lightest);
+    background: #fff;
     padding-top: 6rem;
     left: -100%;
     top: 0;
@@ -325,6 +442,10 @@ footer{
     font-size: 1.5rem;
     text-align: center;
     transition: 300ms;
+  }
+
+  footer{
+    text-align: left !important;
   }
 
   nav a{
@@ -345,7 +466,7 @@ footer{
     width: 100%;
     height: 3px;
     border-radius: 10px;
-    background: var(--light);
+    background: #222;
     z-index: 100;
     transition: 300ms;
   }
@@ -365,13 +486,5 @@ footer{
 
   .menu:focus + nav{
     left: 0;
-  }
-
-  .input-field{
-    position: static;
-  }
-
-  ::placeholder{
-    color: var(--lighter);
   }
 }
